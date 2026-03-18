@@ -81,10 +81,28 @@ body {
     position: relative;
 }
 
-.release-date {
+#update-now {
+    font-size: 3.5rem;
+    color: var(--primary-text);
+    text-align: center;
+
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color);
+    height: 9rem;
+    border: 3px solid var(--accent-color);
+}
+
+#release-date {
     color: var(--secondary-text);
     font-size: 1.1rem;
     margin-top: -0.5rem;
+    text-align: center;
 }
 
 
@@ -105,10 +123,18 @@ body {
     text-decoration: none;
     font-size: 1.5rem;
     text-align: center;
+    margin-bottom: 3rem;
 }
 .link:hover {
     text-decoration: underline;
 }
 
+@media (max-width: 620px) {
+    #update-now {
+        font-size: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
 
 

@@ -18,6 +18,18 @@ function timer () {
     Hours.innerHTML = hours;
     Minutes.innerHTML = minutes;
     Seconds.innerHTML = seconds
+
+    if (Math.floor(distance / 1000) <= 0) {
+        document.getElementById("time-days").style.display = "none"; 
+        document.getElementById("time-hours").style.display = "none"; 
+        document.getElementById("time-minutes").style.display = "none"; 
+        document.getElementById("time-seconds").style.display = "none"; 
+
+        document.getElementById("release-date").innerHTML = "Testa att reloada hemsidan om ett litet tag";
+
+        document.getElementById("update-now").style.display = "flex"; 
+    }
 }
 
 setInterval(timer, 1000);
+

@@ -14,24 +14,29 @@
 
         <p class="countdown-label">Släpps om:</p>
         <div class="countdown">
-            <div class="time">
+            <div class="time" id="time-days">
                 <p id="days" class="time-text">00</p>
                 <p class="time-label">Dagar</p>
             </div>
-            <div class="time">
+            <div class="time" id="time-hours">
                 <p id="hours" class="time-text">00</p>
                 <p class="time-label">Timmar</p>
             </div>
-            <div class="time">
+            <div class="time" id="time-minutes">
                 <p id="minutes" class="time-text">00</p>
                 <p class="time-label">Minuter</p>
             </div>
-            <div class="time">
+            <div class="time" id="time-seconds">
                 <p id="seconds" class="time-text">00</p>
                 <p class="time-label">Sekunder</p>
             </div>
         </div>
-        <p class="release-date">(20 Mars 18:00)</p>
+
+        <div id="update-now" style="display: none;">
+            <p id="update-text">uppdatering pågång</p>
+        </div>
+
+        <p id="release-date">(20 Mars 18:00)</p>
 
         <div class="link-container">
             <p class="link-label">klicka här för att åka</p>
