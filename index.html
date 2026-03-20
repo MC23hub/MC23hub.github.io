@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/styles/universal.css">
+    <link rel="stylesheet" href="/styles/index.css">
+
+    <link rel="shortcut icon" href="/assets/logos/MC23hublogomini.png" type="image/x-icon">
+
+    <title>MC23 HUB</title>
+</head>
+<body>
+
+    <!-- Navigator bar -->
+    <nav>
+
+        <ul>
+            <li>
+                <a href="/index.html">
+                    <img src="/assets/logos/mc23logo.png" class="nav-logo">
+                </a>
+            </li>
+            <li class="hideOnMobile"><a href="/index.html" class="selected">HEM</a></li>
+            <li class="hideOnMobile"><a href="/subsites/spelare.html">SPELARE</a></li>
+            <li class="hideOnMobile"><a href="/subsites/företag.html">FÖRETAG</a></li>
+            <li class="hideOnMobile"><a href="/subsites/övrigt.html">ÖVRIGT</a></li>
+            <li class="end-of-navbar">
+                <button class="menu-button" onclick=showSidebar()><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px"><path d="M120-240v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></button>
+                <div id="nav-auth">
+                <!-- filled by auth.js -->
+                </div>
+            </li>
+        </ul>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px"><path d="m249-207-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+            <li><a href="/index.html" class="selected">HEM</a></li>
+            <li><a href="/subsites/spelare.html">SPELARE</a></li>
+            <li><a href="/subsites/företag.html">FÖRETAG</a></li>
+            <li><a href="/subsites/övrigt.html">ÖVRIGT</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+    <!-- /Navigator bar -->
+
+    <!-- Start welcome screen -->
+    <div class="fadeInUp-animation">
+        <div class="start-container">
+            <img src="assets/logos/MC23hublogo.png">
+            <p>VERSION 2.0</p>
+
+            <svg class="arrow-down" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="100%" viewBox="0 0 1080 1080" enable-background="new 0 0 1080 1080" xml:space="preserve">
+                <path fill="#000000" opacity="0.000000" stroke="none" 
+                    d="
+                M1081.000000,437.000000 
+                    C1081.000000,651.645081 1081.000000,866.290100 1081.000000,1080.967529 
+                    C721.057800,1080.967529 361.115631,1080.967529 1.086728,1080.967529 
+                    C1.086728,721.094055 1.086728,361.188080 1.086728,1.141059 
+                    C360.999969,1.141059 721.000000,1.141059 1081.000000,1.141059 
+                    C1081.000000,74.435478 1081.000000,147.761795 1080.531372,221.544052 
+                    C1008.480286,222.000000 936.897766,222.000000 865.000061,222.000000 
+                    C865.000061,223.439499 865.000122,224.404205 865.000122,225.368927 
+                    C865.000122,294.843140 864.998657,364.317383 865.011719,433.791595 
+                    C865.011963,434.945953 865.187256,436.100250 864.784302,437.136841 
+                    C792.896484,437.019104 721.505249,437.019104 650.068481,437.019104 
+                    C650.068481,509.144806 650.068481,580.612183 649.596802,652.042603 
+                    C578.819397,652.003723 508.513641,652.000183 438.207916,652.011719 
+                    C436.720428,652.011963 435.232910,652.187195 433.863159,651.784302 
+                    C433.980896,579.896484 433.980896,508.505249 433.980896,437.068390 
+                    C361.855255,437.068390 290.387909,437.068390 218.957458,436.596710 
+                    C218.994385,364.871490 218.994385,293.617950 218.994385,222.364563 
+                    C147.068466,222.364563 75.565811,222.364563 4.338289,222.364563 
+                    C4.338289,294.114532 4.338289,365.499756 4.338289,436.926514 
+                    C76.138603,436.926514 147.600647,436.926514 219.033600,437.398987 
+                    C219.004501,509.205566 219.004501,580.539734 219.004501,652.000000 
+                    C267.600128,652.000000 315.534973,651.986511 363.469818,652.005798 
+                    C386.939850,652.015259 410.409912,652.085632 433.935730,652.586060 
+                    C433.991547,724.301147 433.991547,795.558655 433.991547,866.692017 
+                    C506.346802,866.692017 578.085205,866.692017 649.926636,866.692017 
+                    C649.926636,794.901917 649.926636,723.419678 650.399109,651.966492 
+                    C722.205750,651.995544 793.539856,651.995544 865.000000,651.995544 
+                    C865.000000,603.399841 864.986572,555.465027 865.005859,507.530182 
+                    C865.015259,484.060150 865.085571,460.590088 865.586060,437.064270 
+                    C937.695740,437.005646 1009.347900,437.002808 1081.000000,437.000000 
+                z"/>
+                <path  opacity="1.000000" stroke="none" 
+                    d="
+                M865.280823,437.254578 
+                    C865.187256,436.100250 865.011963,434.945953 865.011719,433.791595 
+                    C864.998657,364.317383 865.000122,294.843140 865.000122,225.368927 
+                    C865.000122,224.404205 865.000061,223.439499 865.000061,222.000000 
+                    C936.897766,222.000000 1008.480286,222.000000 1080.531372,222.000000 
+                    C1081.000000,293.354218 1081.000000,364.708466 1081.000000,436.531342 
+                    C1009.347900,437.002808 937.695740,437.005646 865.620911,437.094971 
+                    C865.198181,437.181458 865.280823,437.254578 865.280823,437.254578 
+                z"/>
+                <path  opacity="1.000000" stroke="none" 
+                    d="
+                M649.926636,651.937439 
+                    C649.926636,723.419678 649.926636,794.901917 649.926636,866.692017 
+                    C578.085205,866.692017 506.346802,866.692017 433.991547,866.692017 
+                    C433.991547,795.558655 433.991547,724.301147 433.905029,652.620911 
+                    C433.818542,652.198181 433.745422,652.280823 433.745422,652.280823 
+                    C435.232910,652.187195 436.720428,652.011963 438.207916,652.011719 
+                    C508.513641,652.000183 578.819397,652.003723 649.562500,652.005981 
+                    C649.999817,652.006287 649.926636,651.937439 649.926636,651.937439 
+                z"/>
+                <path  opacity="1.000000" stroke="none" 
+                    d="
+                M219.062698,436.926514 
+                    C147.600647,436.926514 76.138603,436.926514 4.338289,436.926514 
+                    C4.338289,365.499756 4.338289,294.114532 4.338289,222.364563 
+                    C75.565811,222.364563 147.068466,222.364563 218.994385,222.364563 
+                    C218.994385,293.617950 218.994385,364.871490 218.994141,436.562378 
+                    C218.993896,436.999725 219.062698,436.926514 219.062698,436.926514 
+                z"/>
+                <path  opacity="1.000000" stroke="none" 
+                    d="
+                M218.957214,437.034058 
+                    C290.387909,437.068390 361.855255,437.068390 433.980896,437.068390 
+                    C433.980896,508.505249 433.980896,579.896484 433.863159,651.784302 
+                    C433.745422,652.280823 433.818542,652.198181 433.849243,652.163330 
+                    C410.409912,652.085632 386.939850,652.015259 363.469818,652.005798 
+                    C315.534973,651.986511 267.600128,652.000000 219.004501,652.000000 
+                    C219.004501,580.539734 219.004501,509.205566 219.033600,437.398987 
+                    C219.062698,436.926514 218.993896,436.999725 218.957214,437.034058 
+                z"/>
+                <path  opacity="1.000000" stroke="none" 
+                    d="
+                M650.034180,652.042969 
+                    C650.068481,580.612183 650.068481,509.144806 650.068481,437.019104 
+                    C721.505249,437.019104 792.896484,437.019104 864.784302,437.136841 
+                    C865.280823,437.254578 865.198181,437.181458 865.163330,437.150757 
+                    C865.085571,460.590088 865.015259,484.060150 865.005859,507.530182 
+                    C864.986572,555.465027 865.000000,603.399841 865.000000,651.995544 
+                    C793.539856,651.995544 722.205750,651.995544 650.399109,651.966492 
+                    C649.926636,651.937439 649.999817,652.006287 650.034180,652.042969 
+                z"/>
+            </svg>
+
+        </div>
+        <!-- End welcome screen -->
+        <!-- Start Senaste nytt -->
+        <div class="senaste-nytt-container">
+            <img src="assets/logos/senastenytt.png">
+            <p id="senastenytt"></p>
+        </div>
+        <!-- End Senaste nytt -->
+        <!-- Start "the community" -->
+        <div class="the-community-container">
+            <img src="assets/logos/the community.png" class="hideOnMobile" id="thecommunity-desktop">
+            <img src="assets/logos/thecommunitycompact.png" class="thecommunity-mobile">
+            <p>välkommen till MC23! här satsar vi all in på härliga stunder, vänner för livet och mer. en server att minnas helt enkelt!</p>
+        </div>    
+        <!-- End "the community" -->
+        <!-- Start serverns rikaste -->
+        <div class="serverns-rikaste-container">
+            <img src="/assets/logos/serverns rikaste.png" class="serverns-rikaste">
+            <div class="player-box">
+                <ul>
+                    <li class="player-info">
+                        <!-- PLAYER HEAD HERE -->
+                        <img id="max-head" class="serverns-rikaste-head" alt="head">
+                        <!--  -->
+                        <!-- PLAYER NAME HERE -->
+                        <p id="max-name" class="serverns-rikaste-name">Loading...</p>
+
+                    </li>
+                    <li class="diamond-info">
+                        <p class="diamond-count">5235</p>
+                        <img src="/assets/icons/diamond.png" class="diamond">
+                    </li>
+                </ul>
+            </div>
+            <a href="/subsites/leaderboard.html" class="link-to-leaderboard">Se hela listan</a>
+        </div>
+        <!-- End serverns rikaste -->
+    </div>
+
+    
+
+    <script src="/js/heads.js"></script>
+    <script src="/js/names.js"></script>
+    <script type="module">
+        import { db } from './js/firebase-config.js';
+        import { doc, onSnapshot } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+        onSnapshot(doc(db, 'content', 'senaste-nytt'), snap => {
+            if (snap.exists()) {
+            document.getElementById('senastenytt').textContent = snap.data().text;
+            }
+        });
+    </script>
+    <script type="module" src="/js/firebase-config.js"></script>
+    <script type="module" src="/js/auth.js"></script>
+    <script type="module">
+        import { onAuthChange } from './js/auth.js';
+        onAuthChange(user => {
+        const btn = document.getElementById('hero-login-btn');
+        if (user) {
+            btn.textContent = 'Go to Members';
+            btn.href = '/members.html';
+        }
+        });
+    </script>
+</body>
+</html>

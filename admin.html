@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+</head>
+<body>
+    <a href="/index.html">tillbaks till hem</a>
+
+    <p id="loading-msg">Checking permissions...</p>
+    <p id="denied-msg" style="display:none;color:red">❌ Access denied. Admins only.</p>
+
+    <div id="admin-content" style="display:none">
+        <h3>Senaste nytt</h3>
+        <textarea id="senastenytt-input" rows="4" style="width:100%;margin-bottom:0.75rem"></textarea>
+        <button class="btn" id="save-btn">Save</button>
+        <p id="save-status"></p>
+    </div>
+
+    <script type="module" src="/js/firebase-config.js"></script>
+    <script type="module" src="/js/auth.js"></script>
+    <script type="module">
+        import { db } from '/js/firebase-config.js';
+        import { doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+        import { onAuthChange, getUserData } from '/js/auth.js';
+
+        onAuthChange(async user => {
+            document.getElementById('loading-msg').style.display = 'none';
+
+            if (!user) {
+                window.location.href = '/login.html';
+                return;
+            }
+
+            const data = await getUserData(user.uid);
+
+            if (data.role !== 'admin') {
+                document.getElementById('denied-msg').style.display = 'block';
+                return;
+            }
+
+            // User is admin — show the panel
+            document.getElementById('admin-content').style.display = 'block';
+
+            const ref = doc(db, 'content', 'senaste-nytt');
+
+            const snap = await getDoc(ref);
+            if (snap.exists()) {
+                document.getElementById('senastenytt-input').value = snap.data().text;
+            }
+
+            document.getElementById('save-btn').addEventListener('click', async () => {
+                const text = document.getElementById('senastenytt-input').value;
+                await setDoc(ref, { text });
+                document.getElementById('save-status').textContent = '✅ Saved!';
+                setTimeout(() => document.getElementById('save-status').textContent = '', 2000);
+            });
+        });
+    </script>
+</body>
+</html>

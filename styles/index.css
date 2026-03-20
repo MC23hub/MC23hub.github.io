@@ -1,0 +1,239 @@
+:root {
+    --background-color: #0e0e0e;
+    --secondary-color: #121212;
+    --hover-color: #1A1A1A;
+    --accent-color: #0456ee;
+    --primary-text: #ffffff;
+    --secondary-text: #9ca3af;
+    --accent-text: #55fff5;
+}
+
+
+body {
+    align-items: center;
+    justify-content: center;
+}
+
+/* Start of the welcome screen */
+.start-container {
+    position: relative;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    top: 25vh;
+    z-index: -1;
+}
+.start-container svg {
+    position: relative;
+    width: 5vh;
+    z-index: -1;
+    top: 12vh;
+    fill: var(--primary-text);
+}
+.start-container p {
+    position: relative;
+    font-size: 32px;
+    color: var(--secondary-text);
+    z-index: -1;
+}
+.start-container .svg {
+    position: relative;
+    width: 100%;
+    margin-top: 10vh;
+    max-width: 50px;
+    z-index: -1;
+}
+/* End of the welcome screen */
+
+/* Start of senaste nytt */
+.senaste-nytt-container {
+    position: relative;
+    top: 70vh;
+    width: 100%;
+
+    z-index: -1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.senaste-nytt-container img {
+    width: 50vw;
+    max-width: 100%;
+    min-width: 350px;
+    margin: 1vh;
+
+    z-index: -1;
+}
+.senaste-nytt-container p {
+    position: relative;
+    width: 45vw;
+    max-width: 100%;
+
+    text-align: center;
+    font-size: 26px;
+    color: var(--primary-text);
+
+    z-index: -1;
+}
+/* End of senaste nytt */
+
+/* Start of "the community" */
+.the-community-container {
+    top: 90vh;
+    position: relative;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.thecommunity-mobile {
+    display: none;
+    z-index: -1;
+
+    width: 95vw;
+}
+#thecommunity-desktop {
+    width: 50vw;
+    max-width: 100%;
+    min-width: 350px;
+    margin: 1vh;
+    z-index: -1;
+}
+.the-community-container p {
+    width: 45vw;
+    font-size: 26px;
+    text-align: center;
+    color: var(--primary-text);
+    z-index: -1;
+}
+/* End of "the community" */
+
+/* Start of serverns rikaste */
+.serverns-rikaste-container {
+    width: 100%;
+    top: 120vh;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    z-index: -1;
+}
+.serverns-rikaste {
+    width: 35vw;
+    max-width: 100%;
+    min-width: 350px;
+    margin: 1vh;
+
+    z-index: -1;
+}
+.player-box {
+    background-color: var(--secondary-color);
+    width: 50vw;
+    max-width: 40vw;
+    min-width: 350px;
+    margin: 1vh;
+
+    z-index: -1;
+}
+.player-box ul {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    list-style: none;
+    height: 3vw;
+    align-items: center;
+
+    z-index: -1;
+}
+.player-box li {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: -1;
+}
+.serverns-rikaste-head {
+    height: 3vw;
+    width: auto;
+    min-height: 35px;
+    margin-right: 1vh;
+
+    z-index: -1;
+}
+.serverns-rikaste-name {
+    font-size: 140%;
+    color: var(--primary-text);
+
+    z-index: -1;
+}
+.diamond-count {
+    font-size: 120%;
+    color: var(--accent-text);
+
+    z-index: -1;
+}
+.diamond {
+    height: 1.5vw;
+    width: auto;
+    min-height: 25px;
+    display: flex;
+
+    z-index: -1;
+}
+.link-to-leaderboard {
+    color: var(--secondary-text);
+    font-size: 130%;
+    margin-bottom: 30vh;
+
+    z-index: -1;
+}
+@media(max-width: 1200px) {
+    .player-box {
+        height: 110px;
+    }
+    .player-box ul {
+        height: 110px;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 15%;
+    } 
+}
+/* End of serverns rikaste */
+
+
+@media(max-width: 850px) {
+    .thecommunity-mobile {
+        display: flex;
+    }
+}
+@media(max-width: 400px) {
+    .start-container img {
+        width: 350px;
+    }
+    .start-container p {
+        font-size: 28px;
+    }
+
+    .senaste-nytt-container img {
+        width: 350px;
+        min-width: none;
+    }
+    .senaste-nytt-container p {
+        width: 350px;
+    }
+    
+    .the-community-container p {
+        width: 350px;
+    }
+}
