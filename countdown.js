@@ -25,7 +25,7 @@ function timer () {
         document.getElementById("time-minutes").style.display = "none"; 
         document.getElementById("time-seconds").style.display = "none"; 
 
-        document.getElementById("release-date").innerHTML = "Testa att reloada hemsidan om ett litet tag";
+        document.getElementById("release-date").innerHTML = "Testa att reloada hemsidan om några minuter";
 
         document.getElementById("update-now").style.display = "flex"; 
     }
