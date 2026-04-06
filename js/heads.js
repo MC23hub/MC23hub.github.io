@@ -11,6 +11,7 @@ const uuidList = {
 
     // Companies
     pearinc: "11e9093ec7f141cd945bfee11e335ec3", //DmaxB
+    ica: "11e9093ec7f141cd945bfee11e335ec3", //DmaxB
     bob: "1cf2e56473a945549705418804e25b7d", //johannis2010
     kfc: "1cf2e56473a945549705418804e25b7d", //johannis2010
     grusha: "1cf2e56473a945549705418804e25b7d", //johannis2010
