@@ -27,11 +27,11 @@ document.addEventListener("DOMContentLoaded", () => {
         // If the element doesn’t exist on this page → skip it
         if (!nameField) continue;
 
-        fetch(`https://playerdb.co/api/player/minecraft/${uuid}`)
+        fetch(`https://mojang-proxy.maxdabe13.workers.dev/?uuid=${uuid}`)
             .then(res => res.json())
             .then(data => {
-                if (data && data.success && data.data && data.data.player) {
-                    nameField.textContent = data.data.player.username;
+                if (data && data.name) {
+                    nameField.textContent = data.name;
                 } else {
                     nameField.textContent = "kunde inte ladda";
                 }
