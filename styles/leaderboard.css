@@ -46,6 +46,15 @@ body {
     z-index: -1;
 }
 
+.Last-updated {
+    color: var(--secondary-text);
+    font-size: 1.2rem;
+    margin: 1vh;
+}
+.Update-date {
+    color: var(--accent-color);
+}
+
 .player-box {
     background-color: var(--secondary-color);
     width: 50vw;
@@ -55,6 +64,7 @@ body {
 
     z-index: -1;
 }
+
 .player-box ul {
     position: relative;
     display: flex;
@@ -66,6 +76,7 @@ body {
 
     z-index: -1;
 }
+
 .player-box li {
     position: relative;
     display: flex;
@@ -74,6 +85,7 @@ body {
 
     z-index: -1;
 }
+
 .leaderboard-head {
     height: 3vw;
     width: auto;
@@ -82,18 +94,21 @@ body {
 
     z-index: -1;
 }
+
 .leaderboard-name {
     font-size: 140%;
     color: var(--primary-text);
 
     z-index: -1;
 }
+
 .diamond-count {
     font-size: 120%;
     color: var(--accent-text);
 
     z-index: -1;
 }
+
 .diamond {
     height: 1.5vw;
     width: auto;
@@ -102,6 +117,16 @@ body {
 
     z-index: -1;
 }
+
+.total {
+    margin: 2vh;
+}
+.totalt {
+    font-size: 120%;
+    color: var(--primary-text);
+}
+
+
 @media(max-width: 1200px) {
     .player-box {
         height: 110px;
