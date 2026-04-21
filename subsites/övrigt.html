@@ -113,7 +113,7 @@
 
                     </li>
                     <li class="visit-info">
-                        <a onclick="error()" class="visit vi4">
+                        <a onclick="connect()" class="visit vi4">
                             <p>BESÖK</p>
                         </a>
                     </li>
@@ -122,8 +122,10 @@
         </div>
 
         <script>
-            function error() {
-                alert("Sidan för att ansluta företag är tyvärr inte färdig än")
+            function connect() {
+                alert("Kontakta Pear Inc. via mail för att boka tid för möte.");
+
+                window.location.href = "mailto:dmaxbytkontakt@gmail.com";
             }
         </script>
 
