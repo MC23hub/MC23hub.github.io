@@ -149,3 +149,9 @@ h3 {
   display: flex;
   align-items: center;;
 }
+#admin-link-wrap {
+    color: var(--primary-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
