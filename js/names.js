@@ -19,6 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
         bibblan: "11e9093ec7f141cd945bfee11e335ec3", //DmaxB
         bok: "1cf2e56473a945549705418804e25b7d", //johannis2010
         targenia: "11e9093ec7f141cd945bfee11e335ec3", //DmaxB
+        vinova: "a5937b8079e54150a5047f6c91bbfbb9", //Angelcuty
+        drop: "3af2a7b06a8848ad9788ee6129f7a3cd", //william81601
+        goldenplate: "3af2a7b06a8848ad9788ee6129f7a3cd", //william81601
+        mangoinc: "3af2a7b06a8848ad9788ee6129f7a3cd", //william81601
     };
 
     for (const id in uuidList) {
