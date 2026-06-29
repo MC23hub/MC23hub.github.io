@@ -35,8 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
         fetch(`https://name-proxy-iota.vercel.app/api/proxy?uuid=${uuid}`)
             .then(res => res.json())
             .then(data => {
-                if (data && data.username) {
-                    nameField.textContent = data.username;
+                if (data && data.name) {
+                    nameField.textContent = data.name;
                 } else {
                     nameField.textContent = "kunde inte ladda";
                 }
