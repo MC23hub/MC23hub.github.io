@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             })
             .catch(() => {
-                nameField.textContent = "kunde inte ladda";
+                nameField.textContent = "kunde inte ladda2";
             });
     }
 
