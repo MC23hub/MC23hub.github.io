@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // If the element doesn’t exist on this page → skip it
         if (!nameField) continue;
 
-        fetch(`https://api.ashcon.app/mojang/v2/user/${uuid}`)
+        fetch(`https://mojang-proxy.maxdabe13.workers.dev/?uuid=`)
             .then(res => res.json())
             .then(data => {
                 if (data && data.name) {
