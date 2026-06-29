@@ -32,11 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
         // If the element doesn’t exist on this page → skip it
         if (!nameField) continue;
 
-        fetch(`https://sessionserver.mojang.com/session/minecraft/profile/${uuid}`)
+        fetch(`https://api.ashcon.app/mojang/v2/user/${uuid}`)
             .then(res => res.json())
             .then(data => {
                 if (data && data.name) {
-                    nameField.textContent = data.name;
+                    nameField.textContent = data.username;
                 } else {
                     nameField.textContent = "kunde inte ladda";
                 }
