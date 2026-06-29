@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         fetch(`https://mojang-proxy.maxdabe13.workers.dev/?uuid=${uuid}`)
             .then(res => res.json())
             .then(data => {
-                if (data && data.name) {
+                if (data && data.username) {
                     nameField.textContent = data.username;
                 } else {
                     nameField.textContent = "kunde inte ladda";
