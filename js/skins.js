@@ -8,6 +8,7 @@ const uuidList = {
     johannes: "1cf2e56473a945549705418804e25b7d",
     rufus: "35cfcc0781b846aeadfdc40b0447e4f5",
     maxalt: "25888ac1b0934cf18e31643d83604d20",
+    helge: "7de49946e3e14178b4f4f64f8efa206c",
 };
 
 window.onload = () => {
