@@ -118,7 +118,7 @@ dela inte länken med någon!</h3>
       const data = await getUserData(user.uid);
       document.getElementById('loading-msg').style.display = 'none';
       document.getElementById('member-info').style.display = 'block';
-      document.getElementById('account-name').innerHTML = `${data.username || user.email}`;
+      document.getElementById('account-name').innerHTML = `${data.username}`;
 
       if (data.minecraftUUID) {
         document.getElementById('mc-head').src =
